@@ -28,7 +28,7 @@ function player_connected(player)
 end
 
 function balanceteams()
-    local functions = game:scriptcall("maps/mp/gametypes/_teams", "_id_410A")
+    local functions = game:scriptcall("maps/mp/gametypes/_teams", "getteambalance")
     if(functions == 0) then
         balance()		
     end
@@ -141,7 +141,7 @@ end
 
 function updateTeamBalance()
 
-    local isroundbased = game:scriptcall("maps/mp/_utility", "_id_5194")
+    local isroundbased = game:scriptcall("maps/mp/_utility", "isroundbased")
 
     if ( level.teambalance  == 1 and isroundbased == 1 ) then
     	level:onnotify("restarting", balanceteams)
