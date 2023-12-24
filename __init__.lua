@@ -155,8 +155,7 @@ end
 
 function printboltallplayer()
     for i = 1, #playerslistteams do
-        --playerslistteams[i]:iprintlnbold("Balanced teams!")
-		playerslistteams[i]:iprintlnbold(game["strings"]["autobalance"] )
+        playerslistteams[i]:iprintlnbold("Balanced teams!")
     end
 end
 
